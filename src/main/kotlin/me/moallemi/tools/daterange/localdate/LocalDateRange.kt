@@ -12,5 +12,4 @@ class LocalDateRange(
         DateIterator(start, endInclusive, stepDays)
 
     infix fun step(days: Long) = LocalDateRange(start, endInclusive, days)
-
 }
