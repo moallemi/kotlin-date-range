@@ -1,7 +1,7 @@
 
 project.description = "Implementing rangeTo operator for LocalDate and Date in kotlin"
 project.group = "me.moallemi.tools"
-project.version = "0.0.3"
+project.version = "0.0.4"
 project.ext {
     artifactId = 'kotlin-date-range'
     name = 'Kotlin Date Range'
@@ -71,12 +71,9 @@ publishing {
     }
 }
 
-ext."signing.keyId" = System.getenv('SIGNING_KEYID')
-ext."signing.password" = System.getenv('SIGNING_PASSWORD')
-ext."signing.secretKeyRingFile" = System.getenv('SIGNING_SECRET_KEYRING_FILE')
-
 signing {
     required !version.endsWith('SNAPSHOT')
+    useInMemoryPgpKeys(System.getenv('SIGNING_KEY'), System.getenv('SIGNING_PASSWORD'))
     sign(publishing.publications["kotlinDateRange"])
 }
 
@@ -95,6 +92,8 @@ bintray {
         licenses = ['Apache-2.0']
         labels = ['kotlin', 'android', 'date', 'local-date', 'date-range']
         publicDownloadNumbers = false
+        githubRepo = 'moallemi/kotlin-date-range' //Optional Github repository
+        githubReleaseNotesFile = 'README.md' //Optional Github readme file
         version {
             name = project.version
             //desc = 'optional, version-specific description'
