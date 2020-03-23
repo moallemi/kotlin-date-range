@@ -1,8 +1,20 @@
 # Kotlin Date Range
 
-This tiny implementation of `rangeTo` operator for `LocalDate`, makes the syntax for loop iteration and control flow statements safe and natural to read.
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/moallemi/kotlin-date-range/CI)](https://github.com/moallemi/kotlin-date-range/actions?query=workflow%3ACI)
+[![Maven Central](https://img.shields.io/maven-central/v/me.moallemi.tools/kotlin-date-range)](https://search.maven.org/artifact/me.moallemi.tools/kotlin-date-range)
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/moallemi/kotlin-date-range/CI) 
+
+This is a tiny implementation of `rangeTo` operator for `LocalDate` that makes the syntax for loop iteration and control flow statements safe and natural to read.
+
+## Installation
+
+Add the kotlin-date-range to your dependencies section:
+
+```groovy
+dependencies {
+  implementation 'me.moallemi.tools:kotlin-date-range:0.0.3'
+}
+```
 
 
 ## How to use
