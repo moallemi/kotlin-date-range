@@ -1,7 +1,7 @@
 
 project.description = "Implementing rangeTo operator for LocalDate and Date in kotlin"
 project.group = "me.moallemi.tools"
-project.version = "0.0.4"
+project.version = "0.0.5"
 project.ext {
     artifactId = 'kotlin-date-range'
     name = 'Kotlin Date Range'

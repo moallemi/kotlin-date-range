@@ -12,6 +12,8 @@ categories:
       - 'bug'
   - title: '🧰 Maintenance'
     label: 'maintenance'
+exclude-labels:
+  - 'release'
 template: |
   ## What’s Changed
 
