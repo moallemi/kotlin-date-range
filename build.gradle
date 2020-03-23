@@ -3,6 +3,7 @@ plugins {
 
     id 'com.diffplug.gradle.spotless' version '3.27.2'
 
+    id "com.jfrog.bintray" version "1.8.4"
     id "maven-publish"
     id "signing"
 }
