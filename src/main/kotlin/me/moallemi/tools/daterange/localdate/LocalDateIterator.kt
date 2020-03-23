@@ -2,10 +2,10 @@ package me.moallemi.tools.daterange.localdate
 
 import java.time.LocalDate
 
-class DateIterator(
-    val startDate: LocalDate,
-    val endDate: LocalDate,
-    val stepDays: Long
+class LocalDateIterator(
+    startDate: LocalDate,
+    private val endDate: LocalDate,
+    private val stepDays: Long
 ) : Iterator<LocalDate> {
     private var currentDate = startDate
 
