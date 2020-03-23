@@ -1,8 +1,8 @@
 package me.moallemi.tools.daterange.localdate
 
+import java.time.LocalDate
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
-import java.time.LocalDate
 
 class LocalDateRangeTest {
 

@@ -19,6 +19,10 @@ dependencies {
 
 ## How to use
 
+From Java SE 8 onwards, users are asked to migrate to java.time (JSR-310). For Android users, java.time is [added in API level 26+](https://developer.android.com/reference/java/time/package-summary). Projects needing to support lower API levels can use `java.util.Date`.
+
+#### with `java.time.LocalDate`
+
 Using `rangeTo` operator:
 
 ```kotlin
@@ -37,6 +41,15 @@ val endDate = LocalDate.of(2020, 4, 1)
 for (date in startDate..endDate step 2) {
     println(date)
 }
+```
+
+Using with `in` operator:
+
+```kotlin
+val startDate = LocalDate.of(2020, 1, 1)
+val endDate = LocalDate.of(2020, 1, 5)
+
+val actual = LocalDate.of(2020, 1, 2) in (startDate..endDate)
 ```
 
 
