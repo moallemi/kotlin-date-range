@@ -1,10 +1,12 @@
-name: CI
+name: Deploy
 
 on:
   push:
-    branches: [master, dev]
+    branches:
+      - 'releases/**'
   pull_request:
-    branches: [master, dev]
+    branches:
+      - 'releases/**'
 
 jobs:
   build:
@@ -35,3 +37,9 @@ jobs:
 
       - name: Run tests
         run: ./gradlew test
+
+      - name: Deploy to maven
+        run: ./gradlew publish
+
+      - name: Deploy to bintray
+        run: ./gradlew bintrayUpload
