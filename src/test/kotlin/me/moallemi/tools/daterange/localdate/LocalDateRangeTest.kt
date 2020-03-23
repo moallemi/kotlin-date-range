@@ -1,8 +1,8 @@
 package me.moallemi.tools.daterange.localdate
 
-import java.time.LocalDate
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
+import java.time.LocalDate
 
 class LocalDateRangeTest {
 
@@ -36,5 +36,15 @@ class LocalDateRangeTest {
         val actual = (startDate..endDate step 2).iterator().asSequence().toList().map { it.toString() }
 
         assertEquals(expected, actual)
+    }
+
+    @Test
+    fun testContains() {
+        val startDate = LocalDate.of(2020, 1, 1)
+        val endDate = LocalDate.of(2020, 1, 5)
+
+        val actual = LocalDate.of(2020, 1, 2) in (startDate..endDate)
+
+        assertEquals(true, actual)
     }
 }
