@@ -5,13 +5,13 @@ categories:
     labels:
       - 'feature'
       - 'enhancement'
-  - title: '🐛 Bug Fixes'
+  - title: '🐞 Bug Fixes'
     labels:
       - 'fix'
       - 'bugfix'
       - 'bug'
   - title: '🧰 Maintenance'
-    label: 'chore'
+    label: 'maintenance'
 template: |
   ## What’s Changed
 
