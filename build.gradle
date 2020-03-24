@@ -15,6 +15,7 @@ repositories {
 spotless {
     kotlin {
         ktlint("0.36.0")
+        licenseHeaderFile project.rootProject.file('gradle/copyright.kt')
     }
 }
 

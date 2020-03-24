@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Reza Moallemi
+ * Copyright $YEAR Reza Moallemi
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,3 @@
  * limitations under the License.
  */
 
-package me.moallemi.tools.daterange.localdate
-
-import java.time.LocalDate
-
-operator fun LocalDate.rangeTo(other: LocalDate) = LocalDateRange(this, other)
