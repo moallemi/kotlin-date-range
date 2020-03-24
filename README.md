@@ -1,8 +1,7 @@
 # Kotlin Date Range
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/moallemi/kotlin-date-range/CI)](https://github.com/moallemi/kotlin-date-range/actions?query=workflow%3ACI)
-[![Maven Central](https://img.shields.io/maven-central/v/me.moallemi.tools/kotlin-date-range)](https://search.maven.org/artifact/me.moallemi.tools/kotlin-date-range)
-[![Bintray](https://img.shields.io/bintray/v/moallemi/maven/kotlin-date-range?label=jcenter)](https://bintray.com/moallemi/maven/kotlin-date-range)
+[![GitHub Workflow Status](https://github.com/moallemi/kotlin-date-range/workflows/CI/badge.svg)](https://github.com/moallemi/kotlin-date-range/actions?query=workflow%3ACI)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/me.moallemi.tools/kotlin-date-range/badge.svg)](https://search.maven.org/artifact/me.moallemi.tools/kotlin-date-range)
 
 
 This is a tiny implementation of `rangeTo` operator for `Date` and `LocalDate` that makes the syntax for loop iteration and control flow statements safe and natural to read.
