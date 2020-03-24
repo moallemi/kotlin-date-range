@@ -5,7 +5,7 @@
 [![Bintray](https://img.shields.io/bintray/v/moallemi/maven/kotlin-date-range?label=jcenter)](https://bintray.com/moallemi/maven/kotlin-date-range)
 
 
-This is a tiny implementation of `rangeTo` operator for `LocalDate` that makes the syntax for loop iteration and control flow statements safe and natural to read.
+This is a tiny implementation of `rangeTo` operator for `Date` and `LocalDate` that makes the syntax for loop iteration and control flow statements safe and natural to read.
 
 ## Installation
 
@@ -27,6 +27,8 @@ From Java SE 8 onwards, users are asked to migrate to java.time (JSR-310). For A
 Using `rangeTo` operator:
 
 ```kotlin
+import me.moallemi.tools.daterange.localdate.rangeTo
+
 val startDate = LocalDate.of(2020, 3, 22)
 val endDate = LocalDate.of(2020, 4, 1)
 for (date in startDate..endDate) {
@@ -37,6 +39,8 @@ for (date in startDate..endDate) {
 Usage with `step` function:
 
 ```kotlin
+import me.moallemi.tools.daterange.localdate.rangeTo
+
 val startDate = LocalDate.of(2020, 3, 22)
 val endDate = LocalDate.of(2020, 4, 1)
 for (date in startDate..endDate step 2) {
@@ -47,6 +51,8 @@ for (date in startDate..endDate step 2) {
 Using with `in` operator:
 
 ```kotlin
+import me.moallemi.tools.daterange.localdate.rangeTo
+
 val startDate = LocalDate.of(2020, 1, 1)
 val endDate = LocalDate.of(2020, 1, 5)
 
@@ -58,6 +64,8 @@ val result: Boolean = LocalDate.of(2020, 1, 2) in (startDate..endDate)
 Using `rangeTo` operator:
 
 ```kotlin
+import me.moallemi.tools.daterange.date.rangeTo
+
 val calendar = Calendar.getInstance(Locale.getDefault())
 calendar.set(2020, 0, 1)
 val startDate = calendar.time
@@ -71,6 +79,8 @@ for (date in startDate..endDate) {
 Usage with `step` function:
 
 ```kotlin
+import me.moallemi.tools.daterange.date.rangeTo
+
 for (date in startDate..endDate step 2) {
     println(date)
 }
