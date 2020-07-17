@@ -27,4 +27,8 @@ class DateRange(
     override fun iterator(): Iterator<Date> = DateIterator(start, endInclusive, stepDays)
 
     infix fun step(days: Int) = DateRange(start, endInclusive, days)
+
+    companion object {
+        val EMPTY: DateRange = DateRange(Date(1), Date(0))
+    }
 }
