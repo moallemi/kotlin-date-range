@@ -63,4 +63,13 @@ class LocalDateRangeTest {
 
         assertEquals(true, actual)
     }
+
+    @Test
+    fun testEmpty() {
+        val expected = listOf<LocalDate>()
+
+        val actual = LocalDateRange.EMPTY.toList()
+
+        assertEquals(expected, actual)
+    }
 }

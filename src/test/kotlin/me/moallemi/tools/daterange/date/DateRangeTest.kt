@@ -18,6 +18,7 @@ package me.moallemi.tools.daterange.date
 
 import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Date
 import java.util.Locale
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
@@ -63,6 +64,15 @@ class DateRangeTest {
         val actual = (startDate..endDate step 2).map {
             simpleDateFormat.format(it)
         }
+
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    fun testEmpty() {
+        val expected = listOf<Date>()
+
+        val actual = DateRange.EMPTY.toList()
 
         assertEquals(expected, actual)
     }

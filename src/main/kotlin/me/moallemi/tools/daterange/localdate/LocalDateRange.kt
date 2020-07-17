@@ -28,4 +28,8 @@ class LocalDateRange(
         LocalDateIterator(start, endInclusive, stepDays)
 
     infix fun step(days: Long) = LocalDateRange(start, endInclusive, days)
+
+    companion object {
+        val EMPTY: LocalDateRange = LocalDateRange(LocalDate.ofEpochDay(1), LocalDate.ofEpochDay(0))
+    }
 }
