@@ -72,4 +72,15 @@ class LocalDateRangeTest {
 
         assertEquals(expected, actual)
     }
+
+    @Test
+    fun testToString() {
+        val startDate = LocalDate.of(2020, 1, 1)
+        val endDate = LocalDate.of(2020, 1, 5)
+
+        assertEquals(
+            "2020-01-01..2020-01-05",
+            (startDate..endDate).toString()
+        )
+    }
 }
