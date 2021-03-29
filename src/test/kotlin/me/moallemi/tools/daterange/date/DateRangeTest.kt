@@ -76,4 +76,17 @@ class DateRangeTest {
 
         assertEquals(expected, actual)
     }
+
+    @Test
+    fun testToString() {
+        calendar.set(2020, 0, 1)
+        val startDate = calendar.time
+        calendar.set(2020, 0, 5)
+        val endDate = calendar.time
+
+        assertEquals(
+            "2020-01-01..2020-01-05",
+            (startDate..endDate).toString()
+        )
+    }
 }
