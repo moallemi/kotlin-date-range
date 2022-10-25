@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Reza Moallemi
+ * Copyright 2022 Reza Moallemi
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@
 
 package me.moallemi.tools.daterange.date
 
+import junit.framework.TestCase.assertEquals
+import org.junit.Test
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
-import junit.framework.TestCase.assertEquals
-import org.junit.Test
 
 class DateRangeTest {
 

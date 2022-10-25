@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Reza Moallemi
+ * Copyright 2022 Reza Moallemi
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 
 package me.moallemi.tools.daterange.localdate
 
-import java.time.LocalDate
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
+import java.time.LocalDate
 
 class LocalDateRangeTest {
 
