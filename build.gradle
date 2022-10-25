@@ -1,7 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.7.20'
 
-    id 'com.diffplug.gradle.spotless' version '3.27.2'
+    id 'com.diffplug.spotless' version '6.11.0'
 
     id "com.jfrog.bintray" version "1.8.4"
     id "maven-publish"
@@ -14,7 +14,7 @@ repositories {
 
 spotless {
     kotlin {
-        ktlint("0.36.0")
+        ktlint("0.47.1")
         licenseHeaderFile project.rootProject.file('gradle/copyright.kt')
     }
 }
