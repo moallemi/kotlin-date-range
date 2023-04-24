@@ -16,7 +16,11 @@
 
 package me.moallemi.tools.daterange.date
 
+import java.text.SimpleDateFormat
 import java.util.Date
+import me.moallemi.tools.daterange.defaultDateFormat
+
+private val formatter = SimpleDateFormat(defaultDateFormat)
 
 class DateRange(
     override val start: Date,
@@ -27,6 +31,8 @@ class DateRange(
     override fun iterator(): Iterator<Date> = DateIterator(start, endInclusive, stepDays)
 
     infix fun step(days: Int) = DateRange(start, endInclusive, days)
+
+    override fun toString(): String = "${formatter.format(start)}..${formatter.format(endInclusive)}"
 
     companion object {
         val EMPTY: DateRange = DateRange(Date(1), Date(0))

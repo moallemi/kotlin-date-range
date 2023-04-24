@@ -17,6 +17,10 @@
 package me.moallemi.tools.daterange.localdate
 
 import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import me.moallemi.tools.daterange.defaultDateFormat
+
+private val formatter = DateTimeFormatter.ofPattern(defaultDateFormat)
 
 class LocalDateRange(
     override val start: LocalDate,
@@ -28,6 +32,8 @@ class LocalDateRange(
         LocalDateIterator(start, endInclusive, stepDays)
 
     infix fun step(days: Long) = LocalDateRange(start, endInclusive, days)
+
+    override fun toString(): String = "${start.format(formatter)}..${endInclusive.format(formatter)}"
 
     companion object {
         val EMPTY: LocalDateRange = LocalDateRange(LocalDate.ofEpochDay(1), LocalDate.ofEpochDay(0))
